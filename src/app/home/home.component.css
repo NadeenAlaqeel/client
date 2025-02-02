@@ -1,8 +1,9 @@
 footer {
     background-color: #FFD700; 
-    color: #333;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem 0;
+   
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+.numbered-list {
+    list-style-type: decimal; 
+  }
+ 

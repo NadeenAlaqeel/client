@@ -1,0 +1,69 @@
+
+<div className="max-w-3xl mx-auto text-center py-12 px-4">
+    <h1 class="text-center text-4xl font-bold text-gray-900 mb-4">
+        {{title}} {{taskname}} Task </h1>
+  </div>
+  <body> 
+    
+      <form  #TaskForm="ngForm" (ngSubmit)="save()" autocomplete="off" *ngIf="isEditMode">
+        <label>Task Title:</label>
+        <div class="mb-3 form-floating">
+          <input  readonly ="text" [(ngModel)]="model.title" name="title" class="form-control" required>
+        </div>
+      
+        <label>Task Description:</label>
+        <div class="mb-3 form-floating">
+          <textarea [(ngModel)]="model.description" name="description" cols="100" rows="10" required></textarea>
+        </div>
+      
+        <label>Task Status:</label>
+        <select [(ngModel)]="model.status" name="status" required>
+          <option value="To do">To Do</option>
+          <option value="In-progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <br><br>
+
+        <label>Task Priority:</label>
+        <select [(ngModel)]="model.priority" name="priority" required>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      
+        <br><br>
+        <button type="submit" [disabled]="TaskForm.invalid">Save</button>
+      </form>
+      
+      <form #TaskForm="ngForm" (ngSubmit)="save()" autocomplete="off" *ngIf="!isEditMode">
+        <label>Task Title:</label>
+        <div class="mb-3 form-floating">
+          <input type="text" [(ngModel)]="model.title" name="title" class="form-control" required>
+        </div>
+      
+        <label>Task Description:</label>
+        <div class="mb-3 form-floating">
+          <textarea [(ngModel)]="model.description" name="description" cols="100" rows="10" required></textarea>
+        </div>
+      
+        <label>Task Status:</label>
+        <select [(ngModel)]="model.status" name="status" required>
+          <option value="To do">To Do</option>
+          <option value="In-progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <br><br>
+
+        <label>Task Priority:</label>
+        <select [(ngModel)]="model.priority" name="priority" required>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      
+        <br><br>
+        <button type="submit" [disabled]="TaskForm.invalid">Save</button>
+      </form>
+      
+      
+</body>

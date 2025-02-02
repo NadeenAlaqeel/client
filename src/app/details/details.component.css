@@ -1,0 +1,56 @@
+.tasks-container {
+  text-align: left; 
+
+.update-btn {
+  display: block; 
+  margin-top: 10px; 
+  display: block; 
+
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFD700;
+  color: rgb(15, 9, 9);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #4299e1;
+}
+.Delet-btn {
+  display: block; 
+  margin-top: 10px; 
+  display: block; 
+
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff1100;
+  color: rgb(15, 9, 9);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+h4{
+  font-size: bold;
+  color: green;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh; 
+  display: flex;
+  justify-content: center; 
+}
+footer {
+  background-color: #FFD700; 
+  color: #333;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+}

@@ -1,0 +1,47 @@
+<div className="max-w-3xl mx-auto text-center py-12 px-4">
+    <h1 class="text-center text-4xl font-bold text-gray-900 mb-4">
+        Tasks Details   
+      </h1>
+
+  </div>
+  
+<div class="container mt-5">
+    <h2>Your Tasks List:</h2>
+    <hr>
+    <ul  class="tasks-container"> 
+      @for (task of tasks; track task) {
+
+              <li>
+                <h5>  Title :  {{ task.title }}</h5>
+              </li>
+              <li>
+                <h5> Description : {{ task.description }}</h5>
+              </li>
+              <li>
+                <h5> Status :  {{ task.status }}</h5>
+              </li>
+              <li>
+                <h5> Priority : {{ task.priority }} </h5> 
+              </li>
+
+
+              <button *ngIf="task.status !== 'Completed'" 
+              class="update-btn"     
+              (click)="goToEdit(task.id)" >
+        Update
+      </button>
+      <h4 *ngIf="task.status == 'Completed'"  > Bravo! Your Task Completed.
+
+      </h4>
+      <button class="Delet-btn"  (click)="goToDelete(task.id)" >
+Delete
+</button>
+      <hr>
+    }
+
+    </ul>
+    
+    
+  </div>
+  
+    
